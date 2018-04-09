@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>京东-欢迎登录</title>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<script type="text/javascript" src="js/cal.js"></script>
+</head>
+<body>
+<!-- logo展示 -->
+	<div class="layout" id="logo">
+		<a href="https://passport.jd.com/new/login.aspx?ReturnUrl=https%3A%2F%2Fwww.jd.com%2F%3Fcu%3Dtrue%26utm_source%3Dbaidu-pinzhuan%26utm_medium%3Dcpc%26utm_campaign%3Dt_288551095_baidupinzhuan%26utm_term%3D0f3d30c8dba7459bb52f2eb5eba8ac7d_0_1398f5386a804787a191174e7661775a">
+			<img src="img/logo2.png" class="logo">
+		</a>
+		<span class="text1">欢迎登录</span>
+		<a class="text2" href="">&nbsp登录页面，调查问卷</a>
+		<a href="https://surveys.jd.com/index.php?r=survey/index/sid/568245/lang/zh-Hans">
+			<img src="img/d-icon.png" class="news">
+		</a>
+	</div>
+<!-- 网络安全法 -->
+	<div class="layout" id="safe">
+		<i></i>
+		<p>依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 新版<a href="">《京东隐私政策》</a>已上线，将更有利于保护您的个人隐私。</p>
+	</div>
+<!-- 中间部分 -->
+	<div class="center">
+		<div id="enter" class="layout">
+			<div class="box" id="bigbox">
+				<ul>
+					<li><a href="#" id="reda1">扫码登陆</a></li>
+					<li><a href="#" id="reda2">账户登录</a></li>
+					<li>|</li>
+				</ul>
+<!-- 账户登录 -->
+				<div id="zhang">
+					<div id="error1" class="error"><!-- error错误的意思 -->
+						<b></b>
+						<span>请输入账户名和密码</span>
+					</div>
+					<div id="error2" class="error"><!-- error错误的意思 -->
+						<b></b>
+						<span>请输入密码</span>
+					</div>
+					<div id="error3" class="error"><!-- error错误的意思 -->
+						<b></b>
+						<span>请输入账户名</span>
+					</div>
+					<div class="tab1">
+						<label for="username1"><div class="background" id="pink1"></div></label>
+						<input type="text" placeholder="&nbsp;&nbsp;邮箱/用户名/已验证手机" id="username1">
+						<span id="X1"></span>
+					</div>
+					<div class="tab2">
+						<label for="username2"><div class="background" id="pink2"></div></label>
+						<input type="password" placeholder="&nbsp;&nbsp;密码" id="username2">
+						<span id="X2"></span>
+					</div>
+					<a class="forgetpwd" href="https://safe.jd.com/findPwd/index.action">忘记密码</a>
+					<input type="button" value="登录" id="btn">
+				</div>
+<!-- 二维码展示 -->
+				<div id="showcode">
+					<img src="img/show.png" class="erweima">
+					<span class="open">打开<a href="">手机京东</a>&nbsp;&nbsp;扫描二维码</span>
+					<div class="more">
+						<span></span>
+						<span>免输入</span>
+						<span class="faster"></span>
+						<span>更块</span>
+						<span class="more-safe"></span>
+						<span>更安全</span>
+					</div>
+					<img src="img/phone.png" class="phone">
+                </div>
+<!-- 微信qq -->
+				<div class="box2">
+						<span></span>
+						<span></span>
+						<span>|</span>
+						<span></span>
+						<a href="" class="qq">QQ</a>
+						<a href="" class="weixin">微信</a>
+						<a href="" class="now">立即注册</a>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- 导航 -->
+	<div class="nav layout">
+		    <a href="//www.jd.com/intro/about.aspx">关于我们</a><span>|</span>
+            <a href="//www.jd.com/contact/"> 联系我们</a><span>|</span>
+            <a href="//zhaopin.jd.com/"> 人才招聘</a><span>|</span>
+           	<a href="//www.jd.com/contact/joinin.aspx"> 商家入驻</a><span>|</span>
+           	<a href="//www.jd.com/intro/service.aspx">广告服务</a><span>|</span>
+            <a href="//app.jd.com/">手机京东</a><span>|</span>
+            <a href="//club.jd.com/links.aspx">友情链接</a><span>|</span>
+            <a href="//media.jd.com/">销售联盟</a><span>|</span>
+            <a href="//club.jd.com/" >京东社区</a><span>|</span>
+            <a href="//gongyi.jd.com"> 京东公益</a><span>|</span>
+            <a href="//en.jd.com/">English Site</a>
+    </div>
+    <div class="layout" id="copy">Copyright&nbsp;&copy;&nbsp;2004-2017&nbsp;&nbsp;京东JD.com&nbsp;版权所有 </div>
+</body>
+</html>
+<script type="text/javascript">
+	var reda2 = document.getElementById("reda2");
+	var reda1 = document.getElementById("reda1");
+	var btn = document.getElementById("btn");
+	var error1 = document.getElementById("error1");
+	var error2 = document.getElementById("error2");	
+	var error3 = document.getElementById("error3");
+	var username1 = document.getElementById("username1");
+	var username2 = document.getElementById("username2");
+	var usenVal1 =username1.value
+	var X1 = document.getElementById("X1");
+	var X2 = document.getElementById("X2");
+	var pink1 = document.getElementById("pink1");
+	var pink2 = document.getElementById("pink2");
+	var bigbox = document.getElementById("bigbox");
+	// 二维码登录隐藏，账户登录出现
+	reda2.onclick = function(){
+		zhang.style.display = "block";
+		showcode.style.display = "none";
+		bigbox.style.height = "365px"
+	}
+	// 账户登录隐藏，二维码登录出现
+	reda1.onclick = function(){
+		zhang.style.display = "none";
+		showcode.style.display = "block";
+		bigbox.style.height = "388px"
+	}
+	// 输入框点击登录弹出的变化
+	btn.onclick = function(){
+		if(username1.value ==""&&username2.value ==""){   //同时为空的时候点击登录出现的变化
+			error1.style.display = "block";
+			pink2.style.border = "1px solid red";
+			username2.style.border = "1px solid red";
+			pink2.style.backgroundPositionX = "-48px";
+			pink2.style.backgroundPositionY = "-96px";
+			btn.onmouseup = function(){
+				pink1.style.border = "1px solid #bdbdbd";
+				username1.style.border = "1px solid #bdbdbd";
+				pink1.style.backgroundPositionX = "0";
+				pink1.style.backgroundPositionY = "0"
+			}
+			btn.onmousedown = function(){
+				pink1.style.border = "1px solid red";
+				username1.style.border = "1px solid red";
+				pink1.style.backgroundPositionX = "0";
+				pink1.style.backgroundPositionY = "-96px";
+			}
+			username1.onfocus = function(){
+				// 点击框1时框2变化
+				pink2.style.border = "1px solid red";
+				username2.style.border = "1px solid red";
+				pink2.style.backgroundPositionX = "-48px";
+				pink2.style.backgroundPositionY = "-96px";
+				pink1.style.border = "1px solid #bdbdbd";
+				username1.style.border = "1px solid #bdbdbd";
+				pink1.style.backgroundPositionX = "0";
+				pink1.style.backgroundPositionY = "0"
+			}
+			username2.onfocus = function(){
+				// 点击框2时框1变化
+				pink1.style.border = "1px solid red";
+				username1.style.border = "1px solid red";
+				pink1.style.backgroundPositionX = "0";
+				pink1.style.backgroundPositionY = "-96px";
+				pink2.style.border = "1px solid #bdbdbd";
+				username2.style.border ="1px solid #bdbdbd";
+				pink2.style.backgroundPositionX = "-48px";
+				pink2.style.backgroundPositionY = "-48px"
+			}
+			username1.onblur = function(){
+				pink1.style.border = "1px solid red";
+				username1.style.border = "1px solid red";
+				pink1.style.backgroundPositionX = "0";
+				pink1.style.backgroundPositionY = "-96px";
+			}
+			username2.onblur = function(){
+				pink2.style.border = "1px solid red";
+				username2.style.border = "1px solid red";
+				pink2.style.backgroundPositionX = "-48px";
+				pink2.style.backgroundPositionY = "-96px";
+			}
+		}else if(username1.value ==""&&username2.value !=""){  //上面为空，下面有，点击登录的变化
+			error3.style.display = "block";
+			username1.onfocus = function(){
+				// 框2获取光标时变换
+				pink1.style.border = "1px solid #bdbdbd";
+				username1.style.border = "1px solid #bdbdbd";
+				pink1.style.backgroundPositionX = "0";
+				pink1.style.backgroundPositionY = "0"
+			}
+			username1.onblur = function(){
+				//框2失去光标的变换
+				pink1.style.border = "1px solid red";
+				username1.style.border = "1px solid red";
+				pink1.style.backgroundPositionX = "0";
+				pink1.style.backgroundPositionY = "-96px";
+				pink2.style.border = "1px solid #bdbdbd";
+				username2.style.border ="1px solid #bdbdbd";
+				pink2.style.backgroundPositionX = "-48px";
+				pink2.style.backgroundPositionY = "-48px"
+			}
+			btn.onmousedown = function(){
+				pink1.style.border = "1px solid red";
+				username1.style.border = "1px solid red";
+				pink1.style.backgroundPositionX = "0";
+				pink1.style.backgroundPositionY = "-96px";
+				pink2.style.border = "1px solid #bdbdbd";
+				username2.style.border ="1px solid #bdbdbd";
+				pink2.style.backgroundPositionX = "-48px";
+				pink2.style.backgroundPositionY = "-48px"
+			}
+			btn.onmouseup = function(){
+				pink1.style.border = "1px solid #bdbdbd";
+				username1.style.border = "1px solid #bdbdbd";
+				pink1.style.backgroundPositionX = "0";
+				pink1.style.backgroundPositionY = "0"
+			}
+		}else if(username1.value !=""&&username2.value ==""){//下面为空，上面有，点击登录的变化
+			error2.style.display = "block";
+			pink1.style.border = "1px solid #bdbdbd";
+			username1.style.border = "1px solid #bdbdbd";
+			pink1.style.backgroundPositionX = "0";
+			pink1.style.backgroundPositionY = "0";
+			username2.onfocus = function(){
+				// 框2获取光标时变换
+				pink2.style.border = "1px solid #bdbdbd";
+				username2.style.border ="1px solid #bdbdbd";
+				pink2.style.backgroundPositionX = "-48px";
+				pink2.style.backgroundPositionY = "-48px"
+			}
+			username2.onblur = function(){
+				//框2失去光标的变换
+				pink2.style.border = "1px solid red";
+				username2.style.border = "1px solid red";
+				pink2.style.backgroundPositionX = "-48px";
+				pink2.style.backgroundPositionY = "-96px";
+			}
+			btn.onmousedown = function(){
+				pink2.style.border = "1px solid red";
+				username2.style.border = "1px solid red";
+				pink2.style.backgroundPositionX = "-48px";
+				pink2.style.backgroundPositionY = "-96px";
+			}
+			btn.onmouseup = function(){
+				pink2.style.border = "1px solid #bdbdbd";
+				username2.style.border ="1px solid #bdbdbd";
+				pink2.style.backgroundPositionX = "-48px";
+				pink2.style.backgroundPositionY = "-48px";
+			}
+		}else{
+			error1.style.display = "none";
+			error2.style.display = "none";
+			error3.style.display = "none";
+		}
+	}
+	// 调用close—appear函数输入数值框内出现X
+	username1.onkeyup = function(){
+		var res = close_appear(username1.value);
+		console.log(res)
+		if(res){
+			X1.style.display = "block";
+		}else{
+			X1.style.display = "none";
+		}
+	}
+	username2.onkeyup = function(){
+		var res = close_appear(username2.value);
+		console.log(res)
+		if(res){
+			X2.style.display = "block";
+		}else{
+			X2.style.display = "none";
+		}
+	}
+	//删除数值X消失
+	X1.onclick = function(){
+		username1.value = "";
+		X1.style.display = "none";
+	}
+	X2.onclick = function(){
+		username2.value = "";
+		X2.style.display = "none";
+	}
+	username1.onfocus = function(){
+		pink1.style.backgroundPositionX = "0";
+		pink1.style.backgroundPositionY = "-48px";
+	}
+	username1.onblur = function(){
+		pink1.style.backgroundPositionX = "0";
+		pink1.style.backgroundPositionY = "0";
+	}
+	username2.onfocus = function(){
+		pink2.style.backgroundPositionX = "-48px";
+		pink2.style.backgroundPositionY = "-48px";
+	}
+	username2.onblur = function(){
+		pink2.style.backgroundPositionX = "-48px";
+		pink2.style.backgroundPositionY = "0";
+	}
+</script>
